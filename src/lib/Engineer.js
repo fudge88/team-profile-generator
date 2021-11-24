@@ -8,7 +8,11 @@ class Engineer extends Employee {
 
   getGithub() {}
 
-  getRole() {}
+  getRole() {
+    return "ENGINEER";
+  }
+
+  generateCard() {}
 }
 
 module.exports = Engineer;
