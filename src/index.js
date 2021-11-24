@@ -1,4 +1,7 @@
 const inquirer = require("inquirer");
+const Manager = require("./lib/Manager");
+const Engineer = require("./lib/Engineer");
+const Intern = require("./lib/Intern");
 
 // Questions
 const questions = [
@@ -54,14 +57,58 @@ const questions = [
     message: "What is the interns school name?",
     when: ({ role }) => role === "INTERN",
   },
+  {
+    type: "confirm",
+    name: "addAnother",
+    message: "Do you wish to add another employee?",
+  },
 ];
 
 const start = async () => {
-  // prompt user questions
-  const answers = await inquirer.prompt(questions);
+  let inProgress = true;
+  const managers = [];
+  const engineers = [];
+  const interns = [];
 
-  //   render specific question accordingly
-  console.log(answers);
+  while (inProgress) {
+    const answers = await inquirer.prompt(questions);
+
+    if (answers.role === "MANAGER") {
+      const manager = new Manager({
+        name: answers.name,
+        id: answers.id,
+        email: answers.email,
+        officeNumber: answers.officeNumber,
+      });
+      managers.push(manager);
+    }
+
+    if (answers.role === "ENGINEER") {
+      const engineer = new Engineer({
+        name: answers.name,
+        id: answers.id,
+        email: answers.email,
+        github: answers.github,
+      });
+      engineers.push(engineer);
+    }
+
+    if (answers.role === "INTERN") {
+      const intern = new Intern({
+        name: answers.name,
+        id: answers.id,
+        email: answers.email,
+        school: answers.school,
+      });
+      interns.push(intern);
+    }
+
+    if (!answers.addAnother) {
+      inProgress = false;
+    }
+  }
+  const employees = { managers, engineers, interns };
+  console.log(employees);
 };
 
 start();

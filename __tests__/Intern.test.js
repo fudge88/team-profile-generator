@@ -1,4 +1,4 @@
-const Intern = require("..src/lib/Intern");
+const Intern = require("../src/lib/Intern");
 
 describe("intern class", () => {
   const mockIntern = {
