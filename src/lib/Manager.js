@@ -11,6 +11,7 @@ class Manager extends Employee {
   getRole() {
     return "MANAGER";
   }
+
   generateCard() {}
 }
 

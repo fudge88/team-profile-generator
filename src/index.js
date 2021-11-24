@@ -1,6 +1,22 @@
 const inquirer = require("inquirer");
 
-const roleQuestions = [
+// Questions
+const questions = [
+  {
+    type: "input",
+    name: "name",
+    message: "What is the employee's name?",
+  },
+  {
+    type: "input",
+    name: "id",
+    message: "What is the employee's ID?",
+  },
+  {
+    type: "input",
+    name: "email",
+    message: "What is the employee's email?",
+  },
   {
     type: "list",
     name: "role",
@@ -22,47 +38,30 @@ const roleQuestions = [
   },
   {
     type: "input",
-    name: "name",
-    message: "What is the employees name?",
-  },
-  {
-    type: "input",
-    name: "id",
-    message: "What is the employees ID?",
-  },
-  {
-    type: "input",
-    name: "email",
-    message: "What is the employees email?",
-  },
-];
-
-const managerQuestions = [
-  {
-    type: "input",
     name: "officeNumber",
-    message: "What is the managers office telephone number?",
+    message: "What is the manager's office telephone number?",
+    when: ({ role }) => role === "MANAGER",
   },
-];
-const engineerQuestions = [
   {
     type: "input",
     name: "github",
     message: "What is the engineers gitHub profile?",
+    when: ({ role }) => role === "ENGINEER",
   },
-];
-const internQuestions = [
   {
     type: "input",
     name: "school",
     message: "What is the interns school name?",
+    when: ({ role }) => role === "INTERN",
   },
 ];
 
 const start = async () => {
-  const chosenRole = await inquirer.prompt(roleQuestions);
+  // prompt user questions
+  const answers = await inquirer.prompt(questions);
 
-  console.log(chosenRole);
+  //   render specific question accordingly
+  console.log(answers);
 };
 
 start();

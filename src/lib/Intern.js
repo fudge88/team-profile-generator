@@ -11,6 +11,7 @@ class Intern extends Employee {
   getRole() {
     return "INTERN";
   }
+
   generateCard() {}
 }
 
