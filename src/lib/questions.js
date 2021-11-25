@@ -1,5 +1,4 @@
-const validator = require("email-validator");
-// const validateInput = require("./utils");
+const { validateInput, validateEmail, validateNumber } = require("./utils");
 
 // Questions
 const questions = [
@@ -7,34 +6,19 @@ const questions = [
     type: "input",
     name: "name",
     message: "What is the employee's name?",
-    validate: (name) => {
-      if (!name) {
-        return "This field cannot be empty";
-      }
-      return true;
-    },
+    validate: validateInput,
   },
   {
     type: "input",
     name: "id",
     message: "What is the employee's ID?",
-    validate: (id) => {
-      if (isNaN(id)) {
-        return "ID should be a number";
-      }
-      return true;
-    },
+    validate: validateNumber,
   },
   {
     type: "input",
     name: "email",
     message: "What is the employee's email?",
-    validate: (email) => {
-      if (!validator.validate(email)) {
-        return "Please enter valid email";
-      }
-      return true;
-    },
+    validate: validateEmail,
   },
   {
     type: "list",
@@ -59,36 +43,21 @@ const questions = [
     type: "input",
     name: "officeNumber",
     message: "What is the manager's office telephone number?",
-    validate: (officeNumber) => {
-      if (isNaN(officeNumber)) {
-        return "Please enter a valid telephone number";
-      }
-      return true;
-    },
+    validate: validateNumber,
     when: ({ role }) => role === "MANAGER",
   },
   {
     type: "input",
     name: "github",
     message: "What is the engineers gitHub profile?",
-    validate: (github) => {
-      if (!github) {
-        return "This field cannot be empty";
-      }
-      return true;
-    },
+    validate: validateInput,
     when: ({ role }) => role === "ENGINEER",
   },
   {
     type: "input",
     name: "school",
     message: "What is the interns school name?",
-    validate: (school) => {
-      if (!school) {
-        return "This field cannot be empty";
-      }
-      return true;
-    },
+    validate: validateInput,
     when: ({ role }) => role === "INTERN",
   },
   {
