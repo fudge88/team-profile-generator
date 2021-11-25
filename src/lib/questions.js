@@ -1,4 +1,5 @@
 const validator = require("email-validator");
+// const validateInput = require("./utils");
 
 // Questions
 const questions = [
@@ -6,6 +7,12 @@ const questions = [
     type: "input",
     name: "name",
     message: "What is the employee's name?",
+    validate: (name) => {
+      if (!name) {
+        return "This field cannot be empty";
+      }
+      return true;
+    },
   },
   {
     type: "input",
@@ -64,12 +71,24 @@ const questions = [
     type: "input",
     name: "github",
     message: "What is the engineers gitHub profile?",
+    validate: (github) => {
+      if (!github) {
+        return "This field cannot be empty";
+      }
+      return true;
+    },
     when: ({ role }) => role === "ENGINEER",
   },
   {
     type: "input",
     name: "school",
     message: "What is the interns school name?",
+    validate: (school) => {
+      if (!school) {
+        return "This field cannot be empty";
+      }
+      return true;
+    },
     when: ({ role }) => role === "INTERN",
   },
   {
