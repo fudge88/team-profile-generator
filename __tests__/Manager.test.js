@@ -1,4 +1,4 @@
-const Manager = require("..src/lib/Manager");
+const Manager = require("../src/lib/Manager");
 
 describe("Manager class", () => {
   const mockManager = {

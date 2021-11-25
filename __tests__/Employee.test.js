@@ -1,4 +1,4 @@
-const Employee = require("..src/lib/Employee");
+const Employee = require("../src/lib/Employee");
 
 describe("Employee class", () => {
   const mockEmployee = {

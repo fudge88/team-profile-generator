@@ -1,4 +1,4 @@
-const Engineer = require("..src/lib/Engineer");
+const Engineer = require("../src/lib/Engineer");
 
 describe("Engineer class", () => {
   const mockEngineer = {

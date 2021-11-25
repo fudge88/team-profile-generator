@@ -109,6 +109,9 @@ const start = async () => {
   }
   const employees = { managers, engineers, interns };
   console.log(employees);
+
+  const html = generateHTML(employees);
+  writeToFile("../dist/sampleIndex.html", html);
 };
 
 start();
