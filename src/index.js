@@ -3,6 +3,8 @@ const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 const questions = require("./lib/questions");
+const { generateHTML } = require("./generateHTML");
+const { writeToFile } = require("./lib/utils");
 
 const start = async () => {
   let inProgress = true;
@@ -51,7 +53,7 @@ const start = async () => {
   console.log(employees);
 
   const html = generateHTML(employees);
-  writeToFile("../dist/sampleIndex.html", html);
+  writeToFile("./dist/sampleIndex.html", html);
 };
 
 start();

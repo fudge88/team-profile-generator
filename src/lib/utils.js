@@ -1,5 +1,16 @@
 const validator = require("email-validator");
 const Employee = require("./Employee");
+const fs = require("fs");
+
+// write to file
+const writeToFile = (filePath, data) => {
+  try {
+    fs.writeFileSync(filePath, data);
+    console.log("SUCCESS");
+  } catch (error) {
+    console.log(error.message);
+  }
+};
 
 const validateInput = (input) => {
   if (!input) {
@@ -22,9 +33,4 @@ const validateNumber = (number) => {
   return true;
 };
 
-// module.exports = { validateInput };
-// const generateHTML = (employees) => {
-
-// };
-
-module.exports = { validateInput, validateEmail, validateNumber };
+module.exports = { validateInput, validateEmail, validateNumber, writeToFile };
