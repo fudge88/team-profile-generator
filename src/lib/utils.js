@@ -5,4 +5,9 @@
 //   return true;
 // };
 
+const Employee = require("./Employee");
+
 // module.exports = { validateInput };
+const generateHTML = (employees) => {
+  return ``;
+};
