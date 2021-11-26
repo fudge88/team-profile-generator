@@ -20,6 +20,9 @@ const validateInput = (input) => {
 };
 
 const validateEmail = (email) => {
+  if (!email) {
+    return "This field cannot be empty";
+  }
   if (!validator.validate(email)) {
     return "Please enter valid email";
   }
@@ -27,6 +30,9 @@ const validateEmail = (email) => {
 };
 
 const validateNumber = (number) => {
+  if (!number) {
+    return "This field cannot be empty";
+  }
   if (isNaN(number)) {
     return "Please enter a valid number";
   }

@@ -29,7 +29,8 @@ class Engineer extends Employee {
       <ul class="list-group list-group-flush">
       <li class="list-group-item">ID:${this.id}</li>
       <li class="list-group-item">Email: <a href="mailto:${this.email}"><span class="detail">${this.email}</span></a></li>
-      <li class="list-group-item">Github: ${this.github}</li>
+      <li class="list-group-item">Github Username: <a href="https://github.com/${this.github}" target="__blank" 
+      class="github">${this.github}</a></li>
       </ul>
     </div>
   </div>`;

@@ -49,6 +49,8 @@ img.img-size {
   color: #b35919;
   font-size: 2rem;
 }
+
+.github,
 .detail {
   font-family: "Open Sans", sans-serif;
   color: #b35919;
@@ -58,7 +60,6 @@ img.img-size {
 
 .list-group-item {
   font-family: "DM Serif Display", serif;
-  text-transform: uppercase;
   background: transparent;
   padding: 4px 0;
   border: none;
