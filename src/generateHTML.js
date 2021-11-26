@@ -10,8 +10,7 @@ const generateIntern = (interns) => {
 };
 
 const generateEngineer = (engineers) => {
-  if (engineers) {
-    return `<hr />
+  return `<hr />
   <h1 class="pt-5 text-center my-5"><b>THE</b>Engineers</h1>
   <div class="row justify-content-around">${engineers
     .map((each) => {
@@ -19,9 +18,6 @@ const generateEngineer = (engineers) => {
     })
     .join("")}
     </div>`;
-  } else {
-    return "";
-  }
 };
 
 const generateManager = (managers) => {
@@ -72,15 +68,20 @@ const generateHTML = ({ engineers, managers, interns }) => {
       <main class="container back-ground">
 
         <!-- managers -->
-        ${generateManager(managers)}
+        ${managers.length ? generateManager(managers) : ""}
 
         <!-- engineers -->
-        ${generateEngineer(engineers)} 
+        ${engineers.length ? generateEngineer(engineers) : ""}
   
         <!-- interns -->
-        ${generateIntern(interns)}
+        ${interns.length ? generateIntern(interns) : ""}
 
       </main>
+      <footer class="font-small py-4">
+        <div class="text-center py-3">Object-Oriented Programming (OOP)
+          <p class="mt-2">Team Profile Generator 2021</p>
+        </div>
+      </footer>
     </body>
   </html>
   `;

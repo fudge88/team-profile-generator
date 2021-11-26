@@ -42,9 +42,9 @@ nav {
   margin-bottom: 2px;
 }
 
-/* img.card-img-top {
+img.img-size {
   width: 12rem;
-} */
+}
 .name {
   color: #b35919;
   font-size: 2rem;
@@ -81,6 +81,9 @@ hr {
 
 .super {
   text-decoration: underline;
+  font-family: "Open Sans", sans-serif;
+}
+.font-small {
   font-family: "Open Sans", sans-serif;
 }
 

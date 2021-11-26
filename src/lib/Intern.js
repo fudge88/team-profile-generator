@@ -17,7 +17,7 @@ class Intern extends Employee {
   generateCard() {
     return `<div class="card col-sm-12 col-md-6 col-lg-3" style="width: 18rem">
     <img
-      class="card-img-top pt-3"
+      class="card-img-top img-size pt-3"
       src="./assets/intern.png"
       alt="Card image cap"
     />
