@@ -6,7 +6,9 @@ class Engineer extends Employee {
     this.github = github;
   }
 
-  getGithub() {}
+  getGithub() {
+    return this.github;
+  }
 
   getRole() {
     return "ENGINEER";
@@ -24,11 +26,10 @@ class Engineer extends Employee {
         meet
         <span class="name">${this.name}</span>
       </h5>
-      <h6 class="card-subtitle mb-2 text-muted">Manager</h6>
       <ul class="list-group list-group-flush">
       <li class="list-group-item">ID:${this.id}</li>
-        <li class="list-group-item">Email: ${this.email}</li>
-        <li class="list-group-item">Github: ${this.github}</li>
+      <li class="list-group-item">Email: <span class="detail">${this.email}</span</li>
+      <li class="list-group-item">Github: ${this.github}</li>
       </ul>
     </div>
   </div>`;

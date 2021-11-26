@@ -1,9 +1,37 @@
-const generateManager = (managers) => {
-  return managers
+const generateIntern = (interns) => {
+  return `<hr />
+  <h1 class="pt-5 text-center my-5"><b>THE</b>Interns</h1>
+  <div class="row justify-content-around">${interns
     .map((each) => {
       return each.generateCard();
     })
-    .join("");
+    .join("")}
+    </div>`;
+};
+
+const generateEngineer = (engineers) => {
+  if (engineers) {
+    return `<hr />
+  <h1 class="pt-5 text-center my-5"><b>THE</b>Engineers</h1>
+  <div class="row justify-content-around">${engineers
+    .map((each) => {
+      return each.generateCard();
+    })
+    .join("")}
+    </div>`;
+  } else {
+    return "";
+  }
+};
+
+const generateManager = (managers) => {
+  return `<h1 class="pt-5 text-center my-5"><b>THE</b>Managers</h1>
+  <div class="row justify-content-around">${managers
+    .map((each) => {
+      return each.generateCard();
+    })
+    .join("")}
+    </div>`;
 };
 
 const generateHTML = ({ engineers, managers, interns }) => {
@@ -31,7 +59,7 @@ const generateHTML = ({ engineers, managers, interns }) => {
     <body>
       <header>
         <nav>
-          <h1 class="display-1" href="#">About<em>Us</em></h1>
+          <h1 class="heading" href="#">About<em>Us</em></h1>
         </nav>
         <img class="hanging-img" src="./assets/hang.png" alt="hanging lego-man" />
       </header>
@@ -42,115 +70,16 @@ const generateHTML = ({ engineers, managers, interns }) => {
         </p>
       </section>
       <main class="container back-ground">
-        <!-- managers -->
-        <hr />
-        <h1 class="text-center my-5"><b>THE</b>Managers</h1>
-        <div class="row justify-content-around">
 
+        <!-- managers -->
         ${generateManager(managers)}
-        </div>
-  
+
         <!-- engineers -->
-        <hr />
-        <h1 class="text-center my-5">The<b>ENGINEERS</b></h1>
-        <div class="row justify-content-around">
-          <div class="card col-sm-12 col-md-6 col-lg-3" style="width: 18rem">
-            <img
-              class="card-img-top pt-3"
-              src="./assets/engineer.png"
-              alt="Card image cap"
-            />
-            <div class="card-body">
-              <h5 class="card-title">
-                meet
-                <span class="name">Fahra</span>
-              </h5>
-              <h6 class="card-subtitle mb-2 text-muted">Manager</h6>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">Email</li>
-                <li class="list-group-item">Github/Number/School</li>
-              </ul>
-            </div>
-          </div>
-          <div class="card col-sm-12 col-md-6 col-lg-3" style="width: 18rem">
-            <img
-              class="card-img-top pt-3"
-              src="./assets/engineer.png"
-              alt="Card image cap"
-            />
-            <div class="card-body">
-              <h5 class="card-title">
-                meet
-                <span class="name">Fahra</span>
-              </h5>
-              <h6 class="card-subtitle mb-2 text-muted">Engineer</h6>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">Email</li>
-                <li class="list-group-item">Github/Number/School</li>
-              </ul>
-            </div>
-          </div>
-          <div class="card col-sm-12 col-md-6 col-lg-3" style="width: 18rem">
-            <img
-              class="card-img-top pt-3"
-              src="./assets/engineer.png"
-              alt="Card image cap"
-            />
-            <div class="card-body">
-              <h5 class="card-title">
-                meet
-                <span class="name">Fahra</span>
-              </h5>
-              <h6 class="card-subtitle mb-2 text-muted">Intern</h6>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">Email</li>
-                <li class="list-group-item">Github/Number/School</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+        ${generateEngineer(engineers)} 
   
         <!-- interns -->
-        <hr />
-        <h1 class="text-center my-5"><b>THE</b>Interns</h1>
-        <div class="row justify-content-around">
-          <div class="card col-sm-12 col-md-6 col-lg-3" style="width: 18rem">
-            <img
-              class="card-img-top pt-3"
-              src="./assets/intern.png"
-              alt="Card image cap"
-            />
-            <div class="card-body">
-              <h5 class="card-title">
-                meet
-                <span class="name">Fahra</span>
-              </h5>
-              <h6 class="card-subtitle mb-2 text-muted">Manager</h6>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">Email</li>
-                <li class="list-group-item">Github/Number/School</li>
-              </ul>
-            </div>
-          </div>
-          <div class="card col-sm-12 col-md-6 col-lg-3" style="width: 18rem">
-            <img
-              class="card-img-top pt-3"
-              src="./assets/intern.png"
-              alt="Card image cap"
-            />
-            <div class="card-body">
-              <h5 class="card-title">
-                meet
-                <span class="name">Fahra</span>
-              </h5>
-              <h6 class="card-subtitle mb-2 text-muted">Engineer</h6>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">Email</li>
-                <li class="list-group-item">Github/Number/School</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+        ${generateIntern(interns)}
+
       </main>
     </body>
   </html>
