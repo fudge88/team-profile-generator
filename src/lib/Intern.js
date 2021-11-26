@@ -28,7 +28,7 @@ class Intern extends Employee {
       </h5>
       <ul class="list-group list-group-flush">
       <li class="list-group-item">ID:${this.id}</li>
-      <li class="list-group-item">Email: <span class="detail">${this.email}</span</li>
+      <li class="list-group-item">Email: <a href="mailto:${this.email}"><span class="detail">${this.email}</span></a></li>
       <li class="list-group-item">School: ${this.school}</li>
       </ul>
     </div>
