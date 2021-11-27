@@ -45,6 +45,12 @@ nav {
 img.img-size {
   width: 12rem;
 }
+
+hr {
+  max-width: 60%;
+  color: #d1a00e;
+  border-radius: 50%;
+}
 .name {
   color: #b35919;
   font-size: 2rem;

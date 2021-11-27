@@ -1,30 +1,46 @@
 const Intern = require("../src/lib/Intern");
 
-describe("intern class", () => {
-  const mockIntern = {
+describe("Employee class", () => {
+  const mockEmployee = new Intern({
     name: "Bob",
-    id: 123,
+    id: 789,
     email: "internbob@email.com",
-    school: "school",
-  };
-
-  test("should be an instance of intern", () => {
-    const actual = new Intern(mockIntern);
-    const expected = {
-      name: "Bob",
-      id: "123",
-      email: "internbob@email.com",
-      school: "school",
-    };
+    school: "bobsSchool",
+    role: "INTERN",
   });
 
-  test("should return expected name", () => {});
+  // verify name
+  test("should return expected name", () => {
+    const actual = mockEmployee.getName();
+    const expected = "Bob";
+    expect(actual).toEqual(expected);
+  });
 
-  test("should return expected id", () => {});
+  // Verify id
+  test("should return expected id", () => {
+    const actual = mockEmployee.getId();
+    const expected = 789;
+    expect(actual).toEqual(expected);
+  });
 
-  test("should return expected email", () => {});
+  // verify email
+  test("should return expected email", () => {
+    const actual = mockEmployee.getEmail();
+    const expected = "internbob@email.com";
+    expect(actual).toEqual(expected);
+  });
 
-  test("should return expected school", () => {});
+  // verify school
+  test("should return expected github", () => {
+    const actual = mockEmployee.getSchool();
+    const expected = "bobsSchool";
+    expect(actual).toEqual(expected);
+  });
 
-  test("should return expected role", () => {});
+  // verify role
+  test("should return expected role", () => {
+    const actual = mockEmployee.getRole();
+    const expected = "INTERN";
+    expect(actual).toEqual(expected);
+  });
 });
