@@ -2,7 +2,7 @@
 
 A command-line application that takes in information about employees on a software engineering team, then dynamically generates an HTML webpage that displays summaries for each person
 
-![portfolio demo](./assets/img/readme.gif)
+![portfolio demo](./dist/assets/demo.gif)
 
 ## Summary
 
@@ -12,9 +12,9 @@ The answers are collected and dynamically generates an HTML webpage that display
 
 The code was tested by writing `unit tests` for every part of the code.
 
-#### A walk-though video for the app can be viewed [here.](https://drive.google.com/drive/folders/1Z3-xUghfRkOGizXHfOQO7X6_CAET0kaY?usp=sharing)
+#### A walk-though video for the app can be viewed [here.](https://drive.google.com/drive/folders/17Z89XRdsKdNs0G8mk00MT03rcH9QpEj3?usp=sharing)
 
-![portfolio demo](./assets/img/questions.gif)
+![portfolio demo](./dist/assets/questions.gif)
 
 ## User Story
 
@@ -48,7 +48,7 @@ THEN I exit the application, and the HTML is generated
 
 ## Installation Instructions:
 
-You are able to clone this repository, by clicking [here](https://github.com/fudge88/readme-generator) and then clicking on the `code` button. Select how you would like to clone the repository.
+You are able to clone this repository, by clicking [here](https://github.com/fudge88/team-profile-generator) and then clicking on the `code` button. Select how you would like to clone the repository.
 
 If you have your SSH keys set up, you are able to copy the link from the drop down and paste the following into your terminal application:
 
@@ -82,7 +82,7 @@ npm run start
 
 This should start the application, and you will be prompted with questions in the terminal.
 
-![portfolio demo](./assets/img/inquierer.png)
+![portfolio demo](./dist/assets/questions.png)
 
 Once you have answered the questions, you will see a message of 'success' appear in the terminal and a dynamically generated 'generated_readme.md' file will appear in the root directory.
 
