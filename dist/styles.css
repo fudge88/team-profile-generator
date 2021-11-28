@@ -1,3 +1,10 @@
+:root {
+  --bright-yellow: #f3e03b;
+  --dark-yellow: #d1a00e;
+  --orange: #b35919;
+  --black: #000000;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -15,29 +22,60 @@ h5 {
   font-family: "DM Serif Display", serif;
 }
 
-nav {
-  padding: 2rem 5rem;
-}
-
-.back-ground {
-  background: radial-gradient(#f3e03b, #d1a00e);
-}
-
+/* heading */
 .heading {
   font-size: 6rem;
   text-decoration: underline;
   margin: 0;
 }
+
+nav {
+  padding: 2rem 5rem;
+}
+
 .hanging-img {
   position: absolute;
   top: 13%;
   left: 15%;
   height: 10rem;
 }
+
+.sub-heading {
+  transform: rotate(-90deg);
+  top: 14%;
+  left: 23%;
+  position: absolute;
+}
+
+.lead {
+  font-family: "DM Serif Display", serif;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.super {
+  text-decoration: underline;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* background and line-break */
+.back-ground {
+  background: radial-gradient(var(--bright-yellow), var(--dark-yellow));
+}
+
+hr {
+  max-width: 60%;
+  color: var(--dark-yellow);
+  border-radius: 50%;
+}
+
+/* employee cards */
 .card {
   background: transparent;
   border: none;
 }
+
 .card-title {
   margin-bottom: 2px;
 }
@@ -46,20 +84,15 @@ img.img-size {
   width: 12rem;
 }
 
-hr {
-  max-width: 60%;
-  color: #d1a00e;
-  border-radius: 50%;
-}
 .name {
-  color: #b35919;
+  color: var(--orange);
   font-size: 2rem;
 }
 
 .github,
 .detail {
   font-family: "Open Sans", sans-serif;
-  color: #b35919;
+  color: var(--orange);
   text-transform: none;
   font-weight: 700;
 }
@@ -70,71 +103,50 @@ hr {
   padding: 4px 0;
   border: none;
 }
-.sub-heading {
-  transform: rotate(-90deg);
-  top: 14%;
-  left: 23%;
-  position: absolute;
-}
-.lead {
-  font-family: "DM Serif Display", serif;
-  text-align: center;
-  font-size: 2.5rem;
-  font-weight: 700;
-}
-hr {
-  border-top: 2px solid rgba(0, 0, 0, 0.993);
-}
 
-.super {
-  text-decoration: underline;
-  font-family: "Open Sans", sans-serif;
-}
 .font-small {
   font-family: "Open Sans", sans-serif;
 }
 
+/* media queries */
+/* small screen and below */
 @media (max-width: 767.98px) {
-  .hanging-img {
-    display: none;
-  }
-  .lead {
-    text-align: center;
-  }
-  .jumbotron {
-    padding-top: 0;
-  }
   nav {
     padding: 1rem;
   }
+
   .heading {
     text-align: center;
     font-size: 5rem;
   }
+
   .sub-heading {
     display: none;
   }
-}
 
-@media (min-width: 767.98px) {
-  .jumbotron {
-    padding-top: 0;
-    padding-left: 5rem;
+  .hanging-img {
+    display: none;
   }
 
   .lead {
+    text-align: center;
+  }
+}
+
+/* small screen and up */
+@media (min-width: 767.98px) {
+  .lead {
     margin-left: 4rem;
   }
+
   em {
     display: none;
   }
 }
 
+/* large screen and up */
 @media (min-width: 1200px) {
   .heading {
     margin-left: 3rem;
   }
-  /* .sub-heading {
-    left: 23%;
-  } */
 }

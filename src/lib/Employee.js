@@ -6,18 +6,22 @@ class Employee {
     this.role = role;
   }
 
+  // function gets the input for name
   getName() {
     return this.name;
   }
 
+  // function gets the input for id
   getId() {
     return this.id;
   }
 
+  // function gets the input for email
   getEmail() {
     return this.email;
   }
 
+  // function gets the input for job role
   getRole() {
     return "EMPLOYEE";
   }

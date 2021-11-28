@@ -1,3 +1,4 @@
+// function generates intern card(s), by calling function from intern class
 const generateIntern = (interns) => {
   return `<hr />
   <h1 class="pt-5 text-center my-5"><b>THE</b>Interns</h1>
@@ -9,6 +10,7 @@ const generateIntern = (interns) => {
     </div>`;
 };
 
+// function generates intern card(s), by calling function from engineer class
 const generateEngineer = (engineers) => {
   return `<hr />
   <h1 class="pt-5 text-center my-5"><b>THE</b>Engineers</h1>
@@ -20,6 +22,7 @@ const generateEngineer = (engineers) => {
     </div>`;
 };
 
+// function generates manager card(s), by calling function from engineer class
 const generateManager = (managers) => {
   return `<h1 class="pt-5 text-center my-5"><b>THE</b>Managers</h1>
   <div class="row justify-content-around">${managers
@@ -30,6 +33,7 @@ const generateManager = (managers) => {
     </div>`;
 };
 
+// function generates all employee cards, by calling function above for structure
 const generateHTML = ({ engineers, managers, interns }) => {
   return `<!DOCTYPE html>
   <html lang="en">

@@ -1,19 +1,23 @@
 const Employee = require("./Employee");
 
+// manager class which also takes on the properties of employee class
 class Manager extends Employee {
   constructor({ name, id, email, officeNumber }) {
     super({ name, id, email });
     this.officeNumber = officeNumber;
   }
 
+  // function gets the input for office number
   getOfficeNumber() {
     return this.officeNumber;
   }
 
+  // function gets the input for job role
   getRole() {
     return "MANAGER";
   }
 
+  // function generates intern card to render in html dynamically
   generateCard() {
     return `<div class="card col-sm-12 col-md-6 col-lg-3" style="width: 18rem">
     <img

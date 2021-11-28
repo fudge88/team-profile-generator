@@ -12,6 +12,7 @@ const writeToFile = (filePath, data) => {
   }
 };
 
+// function validates input to avoid empty inputs
 const validateInput = (input) => {
   if (!input) {
     return "This field cannot be empty";
@@ -19,6 +20,7 @@ const validateInput = (input) => {
   return true;
 };
 
+// function validates email to avoid incorrect inputs
 const validateEmail = (email) => {
   if (!email) {
     return "This field cannot be empty";
@@ -29,6 +31,7 @@ const validateEmail = (email) => {
   return true;
 };
 
+// function validates input to avoid letter being input
 const validateNumber = (number) => {
   if (!number) {
     return "This field cannot be empty";

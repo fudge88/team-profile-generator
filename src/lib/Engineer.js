@@ -1,19 +1,23 @@
 const Employee = require("./Employee");
 
+// engineer class which also takes on the properties of employee class
 class Engineer extends Employee {
   constructor({ name, id, email, github }) {
     super({ name, id, email });
     this.github = github;
   }
 
+  // function gets the input for github username
   getGithub() {
     return this.github;
   }
 
+  // function gets the input for job role
   getRole() {
     return "ENGINEER";
   }
 
+  // function generates engineer card to render in html dynamically
   generateCard() {
     return `<div class="card col-sm-12 col-md-6 col-lg-3" style="width: 18rem">
     <img
