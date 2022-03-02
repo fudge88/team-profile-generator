@@ -54,7 +54,7 @@ const generateHTML = ({ engineers, managers, interns }) => {
         crossorigin="anonymous"
       />
       <link rel="stylesheet" href="./styles.css" />
-      <title>Document</title>
+      <title>Team Profile Generator</title>
     </head>
     <body>
       <header>
